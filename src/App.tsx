@@ -1,6 +1,7 @@
 import { createSignal, type Component } from 'solid-js';
 
 import styles from './App.module.css';
+import Navbar from './components/Navbar';
 
 interface JsonRespose {
   body: string;
@@ -25,7 +26,8 @@ const App: Component = () => {
   }
 
   return (
-    <div class={styles.App}>
+    <>
+      <Navbar />
       <button class={styles.button} onClick={fetchData}>FetchData from "/"</button>
       {data()  &&
         <p>Response data: {data()!.body}</p>
@@ -33,7 +35,7 @@ const App: Component = () => {
       {error() &&
         <p>An error occured : {error()}</p>
       }
-    </div>
+    </>
   );
 };
 
