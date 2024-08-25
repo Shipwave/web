@@ -8,7 +8,7 @@ const Navbar = () => {
           Shipwave
         </a>
         <div class={styles.links}>
-          <a href='/' class={styles.link}>Button 1</a>
+          <a href='/upload' class={styles.link}>Upload</a>
           <a href='/' class={styles.link}>Button 2</a>
           <a href='/' class={styles.link}>Button 3</a>
         </div>
