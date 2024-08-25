@@ -1,5 +1,6 @@
 import { Component, createSignal } from "solid-js";
 import styles from '../styles/Content.module.css';
+import { Button } from "./ui/button";
 
 interface Song {
   id: number;
@@ -39,23 +40,26 @@ const Content: Component = () => {
   };
 
   return (
-    <div class={styles.container}>
-        <div class={styles.content}>
-          <button class={styles.getSong} onClick={getSong}>Get song</button>
-          {song() && (
-            <div class={styles.info}>
-              <h1 class={styles.title}>{song()!.title}</h1>
-              <p class={styles.detail}>Artist: {song()!.artist}</p>
-              <p class={styles.detail}>Album: {song()!.album}</p>
-              {audioUrl() && <audio class={styles.player} src={audioUrl()!} controls />}
-            </div>
-          )}
-          {error()[0] && (
-            <p class={styles.error}>An error occurred: {error()[0]} - {error()[1]}</p>
-          )}
+    <div class="w-full bg-[#e9e9e9] py-2.5 min-h-[calc(100vh-60px)]">
+    <div class="flex flex-col items-center max-w-[1200px] mx-auto px-5">
+      <Button class="bg-[#3498db] text-white border-none py-2.5 px-5 text-base cursor-pointer rounded transition-colors duration-300 ease-in-out hover:bg-[#2980b9] mb-5" onClick={getSong}>
+        Get song
+      </Button>
+      {song() && (
+        <div class="bg-white p-5 rounded-lg shadow-md mt-5 w-full text-left">
+          <h1 class="text-[#2c3e50] text-4xl mb-2.5">{song()!.title}</h1>
+          <p class="my-2.5 text-lg">Artist: {song()!.artist}</p>
+          <p class="my-2.5 text-lg">Album: {song()!.album}</p>
+          {audioUrl() && <audio class="w-full mt-5" src={audioUrl()!} controls />}
         </div>
-      </div>
-
+      )}
+      {error()[0] && (
+        <p class="bg-[#e74c3c] text-white p-2.5 rounded mt-5">
+          An error occurred: {error()[0]} - {error()[1]}
+        </p>
+      )}
+    </div>
+  </div>
   )
 
 }

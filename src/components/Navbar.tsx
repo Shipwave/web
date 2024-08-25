@@ -1,19 +1,17 @@
-import styles from '../styles/Navbar.module.css'
-
 const Navbar = () => {
   return (
-    <nav class={styles.navbar}>
-      <div class={styles.content}>
-        <a href='/' class={styles.logo}>
-          Shipwave
-        </a>
-        <div class={styles.links}>
-          <a href='/upload' class={styles.link}>Upload</a>
-          <a href='/' class={styles.link}>Button 2</a>
-          <a href='/' class={styles.link}>Button 3</a>
-        </div>
+    <nav class="w-full bg-[#1f1f1f] py-2.5">
+    <div class="flex justify-between items-center max-w-[1200px] mx-auto px-5">
+      <a href='/' class="text-white text-2xl font-bold no-underline">
+        Shipwave
+      </a>
+      <div class="flex gap-5">
+        <a href='/upload' class="text-white no-underline px-2.5 py-1.5 rounded transition-colors duration-300 hover:bg-white/10">Upload</a>
+        <a href='/' class="text-white no-underline px-2.5 py-1.5 rounded transition-colors duration-300 hover:bg-white/10">Button 2</a>
+        <a href='/' class="text-white no-underline px-2.5 py-1.5 rounded transition-colors duration-300 hover:bg-white/10">Button 3</a>
       </div>
-    </nav>
+    </div>
+  </nav>
   )
 }
 
