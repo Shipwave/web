@@ -7,7 +7,8 @@ const Navbar = () => {
       </a>
       <div class="flex gap-5">
         <a href='/upload' class="text-white no-underline px-2.5 py-1.5 rounded transition-colors duration-300 hover:bg-white/10">Upload</a>
-        <a href='/' class="text-white no-underline px-2.5 py-1.5 rounded transition-colors duration-300 hover:bg-white/10">Button 2</a>
+
+        <a href='/' class="text-white no-underline px-2.5 py-1.5 rounded transition-colors duration-300 hover:bg-white/10">Button 3</a>
         <a href='/' class="text-white no-underline px-2.5 py-1.5 rounded transition-colors duration-300 hover:bg-white/10">Button 3</a>
       </div>
     </div>
